@@ -1,17 +1,17 @@
 {
   "name": "project_3_socialdev",
   "version": "1.0.0",
-  "description": "social network for developers",
+  "description": "Social Network for developers",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "Start": "node server.js",
     "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sadeghsachedina/Project_3_socialDev.git"
   },
-  "author": "Sadegh",
+  "author": "Sadegh Sachedina",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sadeghsachedina/Project_3_socialDev/issues"
@@ -22,12 +22,12 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.3.3",
+    "mongoose": "^5.3.9",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^10.8.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.5"
   }
 }

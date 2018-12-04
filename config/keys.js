@@ -1,5 +1,6 @@
-//MLAB database 
+//sandbox account MLab
 
 module.exports = {
-    mongoURI:'mongodb://Sadegh:Msarah05!@ds031995.mlab.com:31995/devconnector'  
+
+    mongoURI:'mongodb://sadegh:sadegh1@ds163013.mlab.com:63013/finaltry'
 };

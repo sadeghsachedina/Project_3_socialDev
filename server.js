@@ -1,34 +1,37 @@
-//Run Depedencies 
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+
 
 const users = require('./routes/api/users');
-const profiles = require('./routes/api/profiles');
+const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
 const app = express();
 
 //DB Config
-const db = require('./config/keys').mongoURI;
+const db = require('./config/keys.js').mongoURI;
 
-//connect to MongoDB
+//connect to mongoDB using mongoose
 mongoose
-    .connect(db)
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log(err));
+  .connect(
+    db,
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.log(err));
 
-//Server 
-app.get('/', (req, res) => res.send('Hello World'));
+app.get('/', (req, res) => res.send('hello world'));
 
 
 //use routes
 app.use('/api/users', users);
-app.use('/api/profiles', profiles);
+app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
+//Heroku Setup
 
-// To Be able to run on Heroku
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => console.log(`Server running on port ${port} `));
+//server using E6
 
+app.listen(port, () => console.log(`Server Running on port ${port}`));
